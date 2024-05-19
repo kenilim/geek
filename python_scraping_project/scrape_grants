@@ -1,0 +1,133 @@
+import os
+import csv
+import requests
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.edge.service import Service as EdgeService
+from webdriver_manager.microsoft import EdgeChromiumDriverManager
+from bs4 import BeautifulSoup
+import time
+
+def scrape_directory_page(directory_url):
+    driver = webdriver.Edge(service=EdgeService('/usr/local/bin/msedgedriver'))
+    driver.get(directory_url)
+    grant_links = []
+
+    while True:
+        grants = driver.find_elements(By.CSS_SELECTOR, '.card-body a')
+        for grant in grants:
+            try:
+                link = grant.get_attribute("href")
+                grant_links.append(link)
+            except Exception as e:
+                print(f"Error finding link: {e}")
+
+        next_page = driver.find_elements(By.CSS_SELECTOR, 'a[aria-label="Next"]')
+        if next_page and next_page[0].is_enabled():
+            next_page[0].click()
+            time.sleep(2)  # wait for the next page to load
+        else:
+            break
+
+    driver.quit()
+    return grant_links
+
+def scrape_grant_details(grant_url):
+    driver = webdriver.Edge(service=EdgeService('/usr/local/bin/msedgedriver'))
+    driver.get(grant_url)
+
+    soup = BeautifulSoup(driver.page_source, 'html.parser')
+    driver.quit()
+
+    details = {'Source URL': grant_url}
+
+    logo_div = soup.find('div', class_='d-flex mb-4')
+    if logo_div:
+        logo_img = logo_div.find('img')
+        if logo_img and logo_img.get('src'):
+            logo_url = logo_img['src']
+            org_name = logo_img['alt']
+            details['Name of Organisation'] = org_name
+            logo_response = requests.get(logo_url)
+            org_folder = os.path.join(os.getcwd(), org_name)
+            os.makedirs(org_folder, exist_ok=True)
+            logo_filename = f"{os.path.basename(logo_url).split('?')[0]}"
+            if not logo_filename.endswith(".png"):
+                logo_filename += ".png"
+            logo_path = os.path.join(org_folder, logo_filename)
+            with open(logo_path, 'wb') as file:
+                file.write(logo_response.content)
+            details['Logo Path'] = logo_path
+
+    about_div = soup.find('div', id='about')
+    if about_div:
+        description = about_div.get_text(strip=True)
+        details['Description'] = description
+
+        external_urls = []
+        for a in about_div.find_all('a', href=True):
+            external_urls.append(a['href'])
+
+        for i, url in enumerate(external_urls):
+            details[f'External_URL_{i + 1}'] = url
+
+    # Extract additional details
+    details_div = soup.find('div', id='details')
+    if details_div:
+        for p in details_div.find_all('p'):
+            text = p.get_text(strip=True)
+            if "Per Capita Income" in text:
+                details['Per Capita Income (PCI)'] = text.split(':')[-1].strip()
+            elif "Free" in text:
+                details['Free'] = text.split(':')[-1].strip()
+            elif "Who can apply" in text:
+                details['Who can apply'] = text.split(':')[-1].strip()
+            elif "What to expect" in text:
+                details['What to expect'] = text.split(':')[-1].strip()
+            elif "How to apply" in text:
+                details['How to apply'] = text.split(':')[-1].strip()
+            elif "Contact" in text:
+                details['Contact'] = text.split(':')[-1].strip()
+
+    return details
+
+def main():
+    directory_url = "https://www.sgsocialsupport.com/directory?cat=Financial"
+    grant_links = scrape_directory_page(directory_url)
+
+    csv_file = 'grants_data.csv'
+    fieldnames = [
+        'Name of Organisation', 'Description', 'Logo Path', 'Source URL',
+        'Per Capita Income (PCI)', 'Free', 'Who can apply', 'What to expect', 
+        'How to apply', 'Contact', 'External_URL_1', 'External_URL_2', 'External_URL_3', 'External_URL_4'
+    ]
+    
+    existing_entries = set()
+    if os.path.exists(csv_file):
+        with open(csv_file, 'r') as file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                existing_entries.add(row.get('Source URL', ''))
+            existing_fields = reader.fieldnames
+            if existing_fields:
+                fieldnames = existing_fields
+
+    with open(csv_file, 'a', newline='') as file:
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+        if file.tell() == 0:
+            writer.writeheader()
+        
+        for link in grant_links:
+            if link in existing_entries:
+                print(f"Skipping existing grant: {link}")
+                continue
+
+            details = scrape_grant_details(link)
+            for key in details:
+                if key not in fieldnames:
+                    fieldnames.append(key)
+            writer.writerow(details)
+
+if __name__ == "__main__":
+    main()
+
