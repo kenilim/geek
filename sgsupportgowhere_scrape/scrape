@@ -1,0 +1,117 @@
+import csv
+import re
+import time
+from selenium import webdriver
+from selenium.webdriver.edge.service import Service as EdgeService
+from selenium.webdriver.edge.options import Options
+from bs4 import BeautifulSoup
+
+def setup_driver():
+    options = Options()
+    options.headless = True
+    options.add_argument("--disable-gpu")
+    service = EdgeService(executable_path="/usr/local/bin/msedgedriver")
+    driver = webdriver.Edge(service=service, options=options)
+    return driver
+
+def clean_text(text):
+    """Remove special characters and keep emails intact."""
+    text = re.sub(r'[^a-zA-Z0-9\s@.]', ' ', text)
+    return text.strip()
+
+def scrape_category(driver, category_url, category_name):
+    driver.get(category_url)
+    time.sleep(5)  # Wait for the page to load
+    soup = BeautifulSoup(driver.page_source, 'html.parser')
+    items = []
+
+    cards = soup.select('.card-body')
+    for card in cards:
+        name_tag = card.select_one('.card-title.h5')
+        description_tag = card.select_one('.ellipsis')
+
+        name = clean_text(name_tag.text) if name_tag else "N/A"
+        description = clean_text(description_tag.text) if description_tag else "N/A"
+
+        link_tag = card.select_one('.stretched-link')
+        link = f"https://www.sgsocialsupport.com{link_tag['href']}" if link_tag else "N/A"
+        
+        items.append({'name': name, 'description': description, 'link': link})
+
+    next_button = soup.select_one('.MuiPaginationItem-page.MuiPaginationItem-previousNext')
+    return items, next_button
+
+def scrape_details(driver, items):
+    for item in items:
+        driver.get(item['link'])
+        time.sleep(5)  # Wait for the page to load
+        soup = BeautifulSoup(driver.page_source, 'html.parser')
+
+        contact = "N/A"
+        website = "N/A"
+        who_can_apply = "N/A"
+        what_to_expect = "N/A"
+        how_to_apply = "N/A"
+
+        contact_tag = soup.select_one('[data-testid="PhoneIcon"] + a')
+        if contact_tag:
+            contact = clean_text(contact_tag.text)
+
+        website_tag = soup.select_one('[data-testid="OpenInNewIcon"] + a')
+        if website_tag:
+            website = clean_text(website_tag['href'])
+
+        for header in soup.find_all('h2'):
+            if 'Who can apply' in header.text:
+                who_can_apply = clean_text(header.find_next('div').text)
+            elif 'What to expect' in header.text:
+                what_to_expect = clean_text(header.find_next('div').text)
+            elif 'How to apply' in header.text:
+                how_to_apply = clean_text(header.find_next('div').text)
+        
+        item.update({
+            'contact': contact,
+            'website': website,
+            'who_can_apply': who_can_apply,
+            'what_to_expect': what_to_expect,
+            'how_to_apply': how_to_apply
+        })
+    return items
+
+def save_to_csv(items, filename):
+    keys = items[0].keys()
+    with open(filename, 'w', newline='', encoding='utf-8') as output_file:
+        dict_writer = csv.DictWriter(output_file, fieldnames=keys, delimiter=';')
+        dict_writer.writeheader()
+        dict_writer.writerows(items)
+
+def main():
+    driver = setup_driver()
+    base_url = "https://www.sgsocialsupport.com/directory?cat="
+    categories = ["Children", "Elderly", "Employment", "Family Service", "Financial", 
+                  "Food", "Grants", "Helplines", "Items", "Legal", "Mental Health", 
+                  "Minorities", "Physical Health", "Shelter", "Social Enterprises", 
+                  "Support Group", "Volunteering", "Misc"]
+    
+    for category in categories:
+        page = 1
+        all_items = []
+        while True:
+            category_url = f"{base_url}{category}&p={page}"
+            print(f"Scraping category: {category}, page {page}")
+            items, next_button = scrape_category(driver, category_url, category)
+            all_items.extend(items)
+            if next_button and not 'disabled' in next_button.attrs:
+                page += 1
+            else:
+                break
+        
+        all_items = scrape_details(driver, all_items)
+        save_to_csv(all_items, f"Updated_{category}_Data.csv")
+        print(f"Scraped {len(all_items)} items from category {category}. Data saved to Updated_{category}_Data.csv")
+
+    driver.quit()
+
+if __name__ == "__main__":
+    main()
+
