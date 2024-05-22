@@ -1,0 +1,111 @@
+Name;Description;Amount;Purpose;Eligibility;Category
+Brain Tumour Society Singapore Wellness Grant;The BTSS Wellness Fund aims to enhance the well-being of members through various programs such as rehabilitation, swimming, badminton, sewing, barista skills, memory improvement, speed reading, musical instrument playing, composing music, singing, psychotherapy, counselling, social skills training, emotional quotient (EQ) training, and home nursing services.;$600;To support brain tumour patients in enhancing their overall well-being through a range of physical, mental, creative, psychological, and social programs.;Available to all members of the Brain Tumour Society Singapore who are Singaporeans or Singapore Permanent Residents.;Grants
+Compassion Fund;Compassion Fund is a crisis response fund that supports students from low-income families facing a recent death, illness, or accident of a family member, resulting in a loss of income. The fund provides short-term financial assistance to offer respite to families during their time of need.;Amount varies;To provide financial assistance to families in crisis, particularly those experiencing loss of income due to a family member's death, illness, or accident.;The fund is geared towards granting short-term assistance, typically between 3 to 12 months. For longer-term assistance, Compassion Fund works with the referring agency/school and family to develop holistic and systemic support.;Financial
+Chan Chiew Ping Fund (Trailblazer Foundation);Provides various support services.;Upon request;To provide financial support.;Open to those in need.;Grants
+ACES Care Limited;Provides a range of services for the community including healthcare and social services.;Upon request;To provide support and services.;Open to those in need.;Misc
+Aidha;Offers financial education and empowerment programs for women.;Upon request;To provide support and services.;Open to those in need.;Employment
+Alife Ltd;Supports families through various counseling and social services.;Upon request;To provide support and services.;Open to those in need.;Family Service
+Alive Community Network;Provides financial assistance and social services to needy individuals.;Amount varies;To provide support and services.;Open to those in need.;Financial
+All Saints Home;Offers residential care and medical services for the elderly.;Upon request;To provide support and services.;Open to those in need.;Elderly
+Apex Harmony Lodge;Provides specialized care for individuals with dementia.;Upon request;To provide support and services.;Open to those in need.;Elderly
+Association for Persons with Special Needs;Supports individuals with special needs through education and training.;Upon request;To provide support and services.;Open to those in need.;Minorities
+Assumption Pathway School;Offers alternative education pathways for students.;Upon request;To provide support and services.;Open to those in need.;Education
+Babes Pregnancy Crisis Support Ltd;Provides support for pregnant teenagers in crisis.;Upon request;To provide support and services.;Open to those in need.;Helplines
+Bethel Community Services;Offers financial aid and social services to families in need.;Amount varies;To provide support and services.;Open to those in need.;Financial
+Beyond Social Services;Supports disadvantaged families through social work and community programs.;Upon request;To provide support and services.;Open to those in need.;Family Service
+Boys' Town;Provides residential care, education, and therapy for boys.;Upon request;To provide support and services.;Open to those in need.;Children
+Bright Hill Evergreen Home;Offers residential care for the elderly.;Upon request;To provide support and services.;Open to those in need.;Elderly
+Care Corner Singapore Ltd;Provides counseling and support services for families.;Upon request;To provide support and services.;Open to those in need.;Helplines
+Caregivers Alliance Limited;Supports caregivers of individuals with mental health issues.;Upon request;To provide support and services.;Open to those in need.;Support Group
+Centre for Fathering Ltd;Promotes active fatherhood through programs and workshops.;Upon request;To provide support and services.;Open to those in need.;Family Service
+Club HEAL;Provides mental health support and rehabilitation services.;Upon request;To provide support and services.;Open to those in need.;Mental Health
+Daughters Of Tomorrow Ltd;Empowers underprivileged women through employment support.;Upon request;To provide support and services.;Open to those in need.;Employment
+Down Syndrome Association (Singapore);Supports individuals with Down Syndrome and their families.;Upon request;To provide support and services.;Open to those in need.;Minorities
+Dover Park Hospice;Provides palliative care for the terminally ill.;Upon request;To provide support and services.;Open to those in need.;Physical Health
+Eden School;Offers special education for children with autism.;Upon request;To provide support and services.;Open to those in need.;Education
+Emmanuel House;Provides shelter and support for the homeless.;Upon request;To provide support and services.;Open to those in need.;Shelter
+FaithActs;Offers a range of community services including youth programs and family support.;Upon request;To provide support and services.;Open to those in need.;Family Service
+Fei Yue Community Services;Provides social services for families, elderly, and youth.;Upon request;To provide support and services.;Open to those in need.;Family Service
+Food from the Heart;Distributes food to needy families and individuals.;Upon request;To provide support and services.;Open to those in need.;Food
+Focus on the Family Singapore Limited;Promotes strong family values through educational programs.;Upon request;To provide support and services.;Open to those in need.;Family Service
+Habitat for Humanity Singapore Ltd.;Builds and repairs homes for underprivileged families.;Upon request;To provide support and services.;Open to those in need.;Shelter
+Handicaps Welfare Association;Supports individuals with disabilities through various services.;Upon request;To provide support and services.;Open to those in need.;Minorities
+HCA Hospice Care;Provides hospice care and support for patients and their families.;Upon request;To provide support and services.;Open to those in need.;Physical Health
+Home Nursing Foundation;Offers home nursing and healthcare services.;Upon request;To provide support and services.;Open to those in need.;Elderly
+I Love Children;Promotes the joys of parenthood and supports families.;Upon request;To provide support and services.;Open to those in need.;Children
+Institute of Mental Health;Provides mental health services and support.;Upon request;To provide support and services.;Open to those in need.;Mental Health
+Kampung Senang Charity and Education Foundation;Offers holistic care and education programs.;Upon request;To provide support and services.;Open to those in need.;Minorities
+KDF Kidney Dialysis Foundation;Provides dialysis treatment and support for kidney patients.;Upon request;To provide support and services.;Open to those in need.;Physical Health
+Life Community Services Society;Supports disadvantaged children and families through various programs.;Upon request;To provide support and services.;Open to those in need.;Family Service
+Lions Befrienders Service Association (Singapore);Provides befriending and care services for the elderly.;Upon request;To provide support and services.;Open to those in need.;Elderly
+Metta Welfare Association;Offers healthcare and social services for various groups.;Upon request;To provide support and services.;Open to those in need.;Physical Health
+MINDSET Care Limited;Provides mental health support and advocacy.;Upon request;To provide support and services.;Open to those in need.;Mental Health
+Movement for the Intellectually Disabled of Singapore (MINDS);Supports individuals with intellectual disabilities.;Upon request;To provide support and services.;Open to those in need.;Minorities
+Muscular Dystrophy Association (Singapore);Supports individuals with muscular dystrophy and their families.;Upon request;To provide support and services.;Open to those in need.;Physical Health
+New Hope Community Services;Provides shelter and support services for the homeless.;Upon request;To provide support and services.;Open to those in need.;Shelter
+NGO;Provides various unspecified community services.;Upon request;To provide support and services.;Open to those in need.;Misc
+Nurture Education Group;Offers early childhood education programs.;Upon request;To provide support and services.;Open to those in need.;Education
+NurtureStars Preschool;Provides preschool education with a focus on holistic development.;Upon request;To provide support and services.;Open to those in need.;Education
+O'Joy Care Services;Offers healthcare and social services for the elderly.;Upon request;To provide support and services.;Open to those in need.;Elderly
+Persatuan Pemudi Islam Singapura (PPIS);Supports women and families through various programs.;Upon request;To provide support and services.;Open to those in need.;Family Service
+Pertapis Education and Welfare Centre;Provides educational and social services for needy families.;Upon request;To provide support and services.;Open to those in need.;Family Service
+Rainbow Centre;Offers special education for children with disabilities.;Upon request;To provide support and services.;Open to those in need.;Education
+Ramakrishna Mission;Provides social services and support for families and individuals.;Upon request;To provide support and services.;Open to those in need.;Family Service
+REACH Community Services Society;Supports families, youth, and elderly through various programs.;Upon request;To provide support and services.;Open to those in need.;Family Service
+Ren Ci Hospital;Offers medical and rehabilitative care for the elderly.;Upon request;To provide support and services.;Open to those in need.;Physical Health
+SATA CommHealth;Provides community healthcare services.;Upon request;To provide support and services.;Open to those in need.;Physical Health
+Singapore Anglican Community Services;Offers social and healthcare services for various groups.;Upon request;To provide support and services.;Open to those in need.;Mental Health
+Singapore Association for Mental Health;Supports individuals with mental health issues.;Upon request;To provide support and services.;Open to those in need.;Mental Health
+Singapore Association of the Visually Handicapped;Supports visually impaired individuals through various services.;Upon request;To provide support and services.;Open to those in need.;Minorities
+Singapore Cancer Society;Provides support and services for cancer patients.;Upon request;To provide support and services.;Open to those in need.;Physical Health
+Singapore Children's Society;Supports and protects children through various programs.;Upon request;To provide support and services.;Open to those in need.;Children
+Singapore Council of Women's Organisations (SCWO);Supports women through advocacy and various programs.;Upon request;To provide support and services.;Open to those in need.;Support Group
+Singapore Red Cross Society;Provides emergency relief and community services.;Upon request;To provide support and services.;Open to those in need.;Helplines
+SPD;Supports individuals with disabilities through various services.;Upon request;To provide support and services.;Open to those in need.;Minorities
+Sunlove Abode for Intellectually-Infirmed Ltd;Offers care and support for individuals with intellectual disabilities.;Upon request;To provide support and services.;Open to those in need.;Elderly
+The Salvation Army;Provides social services and support for needy individuals and families.;Upon request;To provide support and services.;Open to those in need.;Family Service
+Thye Hua Kwan Moral Charities;Offers social and welfare services for various groups.;Upon request;To provide support and services.;Open to those in need.;Family Service
+TOUCH Community Services;Supports families, youth, and elderly through various programs.;Upon request;To provide support and services.;Open to those in need.;Family Service
+TRANS Family Services;Provides social services and support for families.;Upon request;To provide support and services.;Open to those in need.;Family Service
+Very Special Arts Singapore Ltd;Supports individuals with disabilities through the arts.;Upon request;To provide support and services.;Open to those in need.;Minorities
+Viriya Community Services;Offers social services for families and individuals.;Upon request;To provide support and services.;Open to those in need.;Family Service
+Willing Hearts;Provides food and support services for the needy.;Upon request;To provide support and services.;Open to those in need.;Food
+Young Women's Christian Association of Singapore (YWCA);Supports women and families through various programs.;Upon request;To provide support and services.;Open to those in need.;Family Service
+Youth Guidance Outreach Services;Supports at-risk youth through various programs.;Upon request;To provide support and services.;Open to those in need.;Children
+YWCA of Singapore;Provides social services and support for women and families.;Upon request;To provide support and services.;Open to those in need.;Family Service
+Welfare Aid Fund (SCS);Provides temporary financial assistance and/or medical supplies to needy cancer patients.;Upon request;To provide support and services.;Open to those in need.;Financial
+North West Interim Financial Assistance Scheme (North West CDC);Provides interim financial assistance.;Upon request;To provide support and services.;Open to those in need.;Financial
+North West Utilities Assistance Scheme (North West CDC);Provides utilities assistance.;Upon request;To provide support and services.;Open to those in need.;Financial
+NTUC Care Fund (e-Vouchers);Provides financial assistance through e-vouchers.;Upon request;To provide support and services.;Open to those in need.;Financial
+MOSES (Singapore Anglican Community Services);Provides employment and training for individuals with mental health issues.;Upon request;To provide support and services.;Open to those in need.;Social Enterprises
+Mother and Child Project (Singapore Anglican Community Services);Provides vocational training and employment for women in crisis.;Upon request;To provide support and services.;Open to those in need.;Social Enterprises
+MTFA Ihsan Casket (Muslim Trust Fund Association);Provides funerary services and subsidizes burial costs.;Upon request;To provide support and services.;Open to those in need.;Social Enterprises
+Something Old Something New (Singapore Anglican Community Services);Operates thrift shops and provides employment for individuals with mental health issues.;Upon request;To provide support and services.;Open to those in need.;Social Enterprises
+Public Defender’s Office;Provides legal representation for criminal proceedings.;Upon request;To provide support and services.;Open to those in need.;Legal
+Transit Point @ Margaret Drive (New Hope Community Services);Provides temporary shelter for homeless individuals.;Upon request;To provide support and services.;Open to those in need.;Shelter
+Transitional Shelter (AWWA);Provides transitional shelter for homeless families.;Upon request;To provide support and services.;Open to those in need.;Shelter
+Welfare Homes (Sathya Sai Social Service);Provides welfare homes for needy individuals.;Upon request;To provide support and services.;Open to those in need.;Shelter
+Children Cancer Foundation;Provides support for children with cancer and their families.;Upon request;To provide support and services.;Open to those in need.;Children
+Medical Escort Volunteer (Cheng Hong Welfare Service Society);Provides medical escort services.;Upon request;To provide support and services.;Open to those in need.;Volunteering
+NCIS Dream Makers;Provides dream-fulfilling services for cancer patients.;Upon request;To provide support and services.;Open to those in need.;Volunteering
+CCF Consultancy Grant (NCSS Charities Capability Fund);Provides consultancy grants for capability building.;Upon request;To provide support and services.;Open to those in need.;Grants
+CCF Info-Communications Technology Grant (NCSS Charities Capability Fund);Provides ICT grants for capability building.;Upon request;To provide support and services.;Open to those in need.;Grants
+Integrated Employment Services (SACS);Provides employment services for individuals with disabilities.;Upon request;To provide support and services.;Open to those in need.;Employment
+Singapore Association for Mental Health MINDSET Learning Hub;Provides vocational training for individuals with mental health issues.;Upon request;To provide support and services.;Open to those in need.;Employment
+Trybe Counselling & Therapy Service;Provides counselling and therapy services for youth.;Upon request;To provide support and services.;Open to those in need.;Mental Health
+Youth Counselling Services (Singapore Anglican Community Services);Provides counselling services for youth.;Upon request;To provide support and services.;Open to those in need.;Mental Health
+Milk Powder & Diapers Assistance (BCare);Provides milk powder and diapers assistance for needy families.;Upon request;To provide support and services.;Open to those in need.;Children
+Dreams;Provides support and resources for disadvantaged children.;Upon request;To provide support and services.;Open to those in need.;Children
+Training in Activities of Daily Living (ADL);Provides ADL training for individuals with disabilities.;Upon request;To provide support and services.;Open to those in need.;Physical Health
+Dementia Singapore;Provides support for individuals with dementia and their families.;Upon request;To provide support and services.;Open to those in need.;Helplines
+LGBTQ Women's Helpline (Brave Spaces);Provides helpline support for LGBTQ women.;Upon request;To provide support and services.;Open to those in need.;Helplines
+Lifeline NUS;Provides crisis support and intervention services.;Upon request;To provide support and services.;Open to those in need.;Helplines
+Mental Health Helpline (IMH);Provides mental health crisis support.;Upon request;To provide support and services.;Open to those in need.;Helplines
+Myelodysplastic Syndrome (MDS) Support Group (NCIS);Provides support for individuals with MDS.;Upon request;To provide support and services.;Open to those in need.;Support Group
+Narcotics Anonymous;Provides support for individuals recovering from drug addiction.;Upon request;To provide support and services.;Open to those in need.;Support Group
+Nasopharyngeal Cancer (NPC) Support Group (NCCS);Provides support for individuals with NPC.;Upon request;To provide support and services.;Open to those in need.;Support Group
+Blossom Kaki (Senior Volunteerism) Programme (Blossom Seeds);Encourages senior volunteerism through various programs.;Upon request;To provide support and services.;Open to those in need.;Volunteering
+Bless A BTSS Beneficiary (Brain Tumour Society Singapore);Provides support for brain tumour patients.;Upon request;To provide support and services.;Open to those in need.;Volunteering
+Bright Hill Evergreen Home;Provides residential care for the elderly.;Upon request;To provide support and services.;Open to those in need.;Elderly
+Adullam Life Counselling;Provides counselling services for individuals and families.;Upon request;To provide support and services.;Open to those in need.;Family Service
+As-Salaam - PPIS;Provides support services for Muslim families.;Upon request;To provide support and services.;Open to those in need.;Family Service
