@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CircuitFit Prototype</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        #timer, #repCount, #calorieCount, #heartRate {
+            font-size: 48px;
+            margin: 20px 0;
+        }
+        #exercise {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        select, input {
+            font-size: 16px;
+            margin: 5px;
+            padding: 5px;
+        }
+        #setup, #workout {
+            display: none;
+        }
+        #setup.active, #workout.active {
+            display: block;
+        }
+        #heartRateChart {
+            width: 300px;
+            height: 150px;
+            border: 1px solid #ccc;
+            margin: 20px auto;
+            position: relative;
+        }
+        #heartRateLine {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: red;
+            transition: height 1s;
+        }
+        #targetHeartRateLine {
+            position: absolute;
+            width: 100%;
+            border-top: 2px dashed #00f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ... (previous HTML code remains the same) ... -->
+        <div id="workout">
+            <div id="exercise">Press Start to begin workout</div>
+            <div id="timer">00:00</div>
+            <div id="repCount" style="display: none;">0</div>
+            <div id="calorieCount" style="display: none;">0</div>
+            <div id="heartRate" style="display: none;">0</div>
+            <div id="heartRateChart" style="display: none;">
+                <div id="heartRateLine"></div>
+                <div id="targetHeartRateLine"></div>
+            </div>
+            <button id="startBtn">Start</button>
+            <button id="pauseBtn">Pause</button>
+            <button id="nextBtn">Next Exercise</button>
+            <button id="resetBtn">Reset</button>
+            <input type="number" id="updateCalorie" placeholder="Update Calories" style="display: none;">
+            <input type="number" id="updateHeartRate" placeholder="Update Heart Rate" style="display: none;">
+            <button id="updateBtn" style="display: none;">Update</button>
+        </div>
+    </div>
+
+    <script>
+        // ... (previous JavaScript code remains the same) ...
+
+        const heartRateChart = document.getElementById('heartRateChart');
+        const heartRateLine = document.getElementById('heartRateLine');
+        const targetHeartRateLine = document.getElementById('targetHeartRateLine');
+
+        function updateHeartRateChart() {
+            const percentage = (currentHeartRate / targetHeartRate) * 100;
+            heartRateLine.style.height = `${Math.min(percentage, 100)}%`;
+            targetHeartRateLine.style.bottom = `${100}%`;
+        }
+
+        function setupExercise() {
+            const exercise = exercises[currentExercise];
+            exerciseDisplay.textContent = exercise.name;
+            timer.style.display = 'none';
+            repCountDisplay.style.display = 'none';
+            calorieCountDisplay.style.display = 'none';
+            heartRateDisplay.style.display = 'none';
+            heartRateChart.style.display = 'none';
+            updateCalorie.style.display = 'none';
+            updateHeartRate.style.display = 'none';
+            updateBtn.style.display = 'none';
+
+            switch (exercise.type) {
+                // ... (previous cases remain the same) ...
+                case 'heartRate':
+                    targetHeartRate = exercise.heartRate;
+                    currentHeartRate = 0;
+                    heartRateDisplay.textContent = `${currentHeartRate} / ${targetHeartRate}`;
+                    heartRateDisplay.style.display = 'block';
+                    heartRateChart.style.display = 'block';
+                    updateHeartRate.style.display = 'inline';
+                    updateBtn.style.display = 'inline';
+                    updateHeartRateChart();
+                    break;
+            }
+        }
+
+        updateBtn.addEventListener('click', () => {
+            const exercise = exercises[currentExercise];
+            if (exercise.type === 'calories') {
+                currentCalories = parseInt(updateCalorie.value) || currentCalories;
+                calorieCountDisplay.textContent = `${currentCalories} / ${targetCalories}`;
+                if (currentCalories >= targetCalories) {
+                    startRest();
+                }
+            } else if (exercise.type === 'heartRate') {
+                currentHeartRate = parseInt(updateHeartRate.value) || currentHeartRate;
+                heartRateDisplay.textContent = `${currentHeartRate} / ${targetHeartRate}`;
+                updateHeartRateChart();
+            }
+        });
+
+        // ... (rest of the JavaScript code remains the same) ...
+    </script>
+</body>
+</html>
